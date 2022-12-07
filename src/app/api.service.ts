@@ -25,4 +25,9 @@ export class ApiService {
     return this.http.post("http://localhost:8080/useradd",userData)
   }
 
+  searchProduct=(dataToSearch:any)=>{
+    return this.http.post("http://localhost:8080/search",dataToSearch)
+  }
+
+
 }
