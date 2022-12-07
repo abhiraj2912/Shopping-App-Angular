@@ -25,6 +25,12 @@ export class UserRegisterComponent {
           console.log(response)
           if (response.status=="success") {
             alert("User Registered Successfully")
+            this.name=""
+            this.address=""
+            this.phone=""
+            this.email=""
+            this.password=""
+            this.cpassword=""
           } else {
             alert("Something went wrong")
           }

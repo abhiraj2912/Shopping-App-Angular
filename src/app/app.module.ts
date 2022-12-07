@@ -12,7 +12,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { UserViewComponent } from './user-view/user-view.component';
-import { AdminViewComponent } from './admin-view/admin-view.component'
+import { AdminViewComponent } from './admin-view/admin-view.component';
+import { AddProductComponent } from './add-product/add-product.component'
 
 const myRoute:Routes=[
   {
@@ -26,6 +27,18 @@ const myRoute:Routes=[
   {
     path:"signup",
     component:UserRegisterComponent
+  },
+  {
+    path:"userview",
+    component:UserViewComponent
+  },
+  {
+    path:"adminview",
+    component:AdminViewComponent
+  },
+  {
+    path:"adminadd",
+    component:AddProductComponent
   }
 ]
 
@@ -38,12 +51,13 @@ const myRoute:Routes=[
     AdminNavbarComponent,
     UserNavbarComponent,
     UserViewComponent,
-    AdminViewComponent
+    AdminViewComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule,
+    RouterModule.forRoot(myRoute),
     FormsModule,
     HttpClientModule
   ],
