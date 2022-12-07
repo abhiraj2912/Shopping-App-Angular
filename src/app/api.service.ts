@@ -17,8 +17,8 @@ export class ApiService {
   }
 
 
-  fetchUser=()=>{
-    return this.http.get("http://localhost:8080/login")
+  fetchUser=(loginData:any)=>{
+    return this.http.post("http://localhost:8080/login",loginData)
   }
 
   addUser=(userData:any)=>{
