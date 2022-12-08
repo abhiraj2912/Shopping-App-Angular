@@ -17,6 +17,7 @@
                         <thead>
                           <tr>
                             <th scope="col">Name</th>
+                            <th scope="col">Image</th>
                             <th scope="col">Category</th>
                             <th scope="col">Description</th>
                             <th scope="col">Price</th>
@@ -25,6 +26,7 @@
                         <tbody>
                           <tr *ngFor="let i of productData">
                             <td>{{i.name}}</td>
+                            <td><img height="50px" src="{{i.image}}" alt=""></td>
                             <td>{{i.category}}</td>
                             <td>{{i.description}}</td>
                             <td>{{i.price}}</td>
