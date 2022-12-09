@@ -26,7 +26,7 @@ export class UserLoginComponent {
           console.log(userId)
           localStorage.setItem("userInfo", userId)
 
-          this.route.navigate(['/userview'])
+          this.route.navigate(['/viewprofile'])
           
           
         } else {

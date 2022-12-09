@@ -13,7 +13,8 @@ import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { UserViewComponent } from './user-view/user-view.component';
 import { AdminViewComponent } from './admin-view/admin-view.component';
-import { AddProductComponent } from './add-product/add-product.component'
+import { AddProductComponent } from './add-product/add-product.component';
+import { ViewProfileComponent } from './view-profile/view-profile.component'
 
 const myRoute:Routes=[
   {
@@ -39,6 +40,10 @@ const myRoute:Routes=[
   {
     path:"adminadd",
     component:AddProductComponent
+  },
+  {
+    path:"viewprofile",
+    component:ViewProfileComponent
   }
 ]
 
@@ -52,7 +57,8 @@ const myRoute:Routes=[
     UserNavbarComponent,
     UserViewComponent,
     AdminViewComponent,
-    AddProductComponent
+    AddProductComponent,
+    ViewProfileComponent
   ],
   imports: [
     BrowserModule,
