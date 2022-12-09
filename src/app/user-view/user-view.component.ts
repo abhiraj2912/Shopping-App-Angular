@@ -10,7 +10,7 @@ export class UserViewComponent {
 
   name=""
 
-  productData:any={}
+  productData:any=[]
   constructor(private api:ApiService){
     api.fetchProduct().subscribe(
       (response:any)=>{

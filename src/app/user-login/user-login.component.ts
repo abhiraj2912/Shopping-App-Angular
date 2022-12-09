@@ -21,11 +21,16 @@ export class UserLoginComponent {
 
     this.api.fetchUser(data).subscribe(
       (response:any)=>{
-        if (response.length==0) {
-          alert("Invalid Credentials")
+        if (response.status=="success") {
+          let userId:any=response.id
+          console.log(userId)
+          localStorage.setItem("userInfo", userId)
+
+          this.route.navigate(['/viewprofile'])
+          
           
         } else {
-          this.route.navigate(['/userview'])
+          alert("Invalid Credentials")
           
         }
       }
